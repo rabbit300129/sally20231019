@@ -24,11 +24,21 @@
     right: 50px;
 }
 
-.box .eye.point {
-    height: 80px;
-    width: 80px;
+.box .eye .point {
+    height: 40px;
+    width: 40px;
     background: rgb(10, 5, 5);
     position: absolute;
-    border-radius: 100px;
-    top: 60px;
+    border-radius: 40px;
+    top: 20px;
+    left: 40px;
+}
+
+.box .mouth {
+    height: 50px;
+    width: 200px;
+    background: white;
+    position: absolute;
+    top: 300px;
+    left: 150px;
 }
