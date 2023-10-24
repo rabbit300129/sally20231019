@@ -1,0 +1,34 @@
+.box {
+    height: 500px;
+    width: 500px;
+    background: rgb(255, 153, 0);
+    position: fixed;
+    top: calc(50% - 250px);
+    left: calc(50% - 250px);
+}
+
+.box .eye {
+    height: 100px;
+    width: 100px;
+    background: rgb(253, 248, 248);
+    position: absolute;
+    border-radius: 100px;
+    top: 60px;
+}
+
+.box .eye.left {
+    left: 50px;
+}
+
+.box .eye.right {
+    right: 50px;
+}
+
+.box .eye.point {
+    height: 80px;
+    width: 80px;
+    background: rgb(10, 5, 5);
+    position: absolute;
+    border-radius: 100px;
+    top: 60px;
+}
