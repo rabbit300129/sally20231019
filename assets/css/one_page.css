@@ -1,0 +1,125 @@
+body {
+    background: rgb(76, 68, 68);
+    font-size: 16px;
+}
+
+.footer {
+    background: white;
+    height: 100px;
+}
+
+.footer-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.copyright {
+    font-size: 0.9rem;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    height: 80px;
+}
+
+.header-row {
+    background: white;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.header-row .menu ul {
+    display: flex;
+    gap: 20px;
+}
+
+.header-row .menu li {
+    text-align: center;
+}
+
+.header-row .menu .en {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.header-row .menu .zh {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.page {
+    height: 100vh;
+}
+
+.p-1 {
+    background-color: rgb(63, 63, 63);
+    background-image: ;
+    background-size: cover;
+    position: relative;
+}
+
+.p-1::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgb(47, 39, 39);
+}
+
+.p-1 .page-position {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.p-1 .page-raw {
+    background: rgba(14, 50, 80, 0.9);
+    width: 100%;
+    display: flex;
+    color: white;
+    border-radius: 10px;
+    min-height: 300px;
+}
+
+.p-1 .page-row>div {
+    width: 50%;
+    padding: 20%;
+}
+
+.slogan {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.slogan::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: calc(50% - 140px);
+    width: 0;
+    height: 3px;
+    border-left: 100px solid #1072c2;
+    border-right: 180px solid #fff;
+}
+
+.content {
+    line-height: 26px;
+    font-size: 0.9rem;
+    text-align: justify;
+}
+
+.form-item {
+    margin-bottom: 15px;
+}
