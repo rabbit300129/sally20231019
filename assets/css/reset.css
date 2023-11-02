@@ -6,11 +6,20 @@
     box-sizing: border-box;
 }
 
+ul {
+    list-style-type: none;
+}
+
 a {
     text-decoration: none;
     color: inherit;
 }
 
-ul {
-    list-style-type: none;
+.container {
+    max-width: 800px;
+    height: 100%;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: auto;
 }
