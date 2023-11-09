@@ -1,0 +1,70 @@
+.background {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background: rgb(29, 95, 219);
+    position: relative;
+    overflow: hidden;
+}
+
+.cloud {
+    width: 600px;
+    height: 200px;
+    border-radius: 1000px;
+    background: white;
+    transform: translate(500px, 500px);
+    position: relative;
+    animation-name: fly;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+}
+
+.cloud::after {
+    content: '';
+    position: absolute;
+    top: -67px;
+    left: 46px;
+    width: 200px;
+    height: 200px;
+    border-radius: 1000px;
+    background: #fff;
+    background: inherit;
+
+}
+
+.cloud::before {
+    content: '';
+    position: absolute;
+    top: -120px;
+    left: 200px;
+    width: 300px;
+    height: 300px;
+    border-radius: 1000px;
+    background: #fff;
+    background: inherit;
+
+}
+
+.cloud:nth-child(2) {
+    transform: scale(2) translate(0px, 1000px);
+    animation-duration: 1s;
+}
+
+.cloud:nth-child(3) {
+    transform: scale(1.1) translate(0px, 800px);
+    animation-duration: 6s;
+}
+
+@keyframes fly {
+    0% {
+        left: 0;
+        background: white;
+    }
+
+    100% {
+        left: 100%;
+        background: black;
+    }
+
+}
