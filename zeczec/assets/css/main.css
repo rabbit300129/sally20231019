@@ -1,0 +1,163 @@
+:root {
+    --header-h: 70px;
+    --header-bg: rgb(255, 255, 255);
+    --header-border-color: #ececec;
+}
+
+html,
+body {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 16px;
+}
+
+img {
+    max-width: 100%;
+}
+
+.header {
+    height: var(--header-h);
+    background-color: var(--header-bg);
+    border-bottom: 2px solid var(--header-border-color);
+}
+
+.header-wrap {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-logo {
+    border-right: 2px solid var(--header-border-color);
+    text-align: center;
+}
+
+.header-logo img {
+    max-width: 70%;
+}
+
+.header-menu {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.header-menu-item ul {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.menu-button-wrap {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.menu-button-wrap a {
+    padding: 5px 10px;
+    background-color: #eeeeee;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: 0.5s;
+}
+
+.menu-button-wrap a:hover,
+.menu-button-wrap a.active {
+    color: rgb(25, 108, 202);
+}
+
+.proudct-information {
+    margin: 20px auto;
+}
+
+.product-information-wrap {
+    display: flex;
+
+}
+
+.product-information-video {
+    flex: 2;
+}
+
+.product-information-text {
+    flex: 1;
+    padding: 0 10px;
+}
+
+.category-nav {
+    display: flex;
+    gap: 20px;
+}
+
+.category-nav li {
+    position: relative;
+}
+
+.category-nav li::after {
+    content: '\\';
+    position: absolute;
+    right: -14px;
+}
+
+.category-nav li:last-child::after {
+    display: none;
+}
+
+.author-name {
+    color: rgb(12, 66, 241);
+}
+
+.product-name {
+    font-size: 1.3rem;
+    margin: 20px auto;
+}
+
+.project-process {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.goal-percentage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border: 2px solid #2926c9;
+    border-radius: 1000px;
+    font-size: 0.9rem;
+}
+
+.project-goal {
+    font-size: 0.9rem;
+    color: rgb(188, 17, 223);
+}
+
+.project-current {
+    font-size: 1.2rem;
+}
+
+.project-count {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 0.9rem;
+}
+
+.process-info {
+    flex: 1;
+}
+
+.project-count-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.project-count-item>span:last-child {
+    color: #2926c9;
+}
