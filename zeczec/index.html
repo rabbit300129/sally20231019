@@ -94,10 +94,95 @@
                             </div>
                         </div>
                     </div>
+                    <div class="project-desctiption">
+                        S+寒風凜冽，但你卻能隨時隨地感受到溫暖。一杯，不僅僅是一個容器，更是一個溫馨的陪伴。保溫杯，宛如一位忠實的朋友，用它，你可以攜帶著溫暖，走過冰雪天。
+                    </div>
+                    <hr class="line">
+                    <div class="project-run-range">
+                        募資期間 2023/06/06 20:00 - 2023/07/26 23:59
+                    </div>
+                    <dvi class="share-item">
+                        <span>
+                            <a href="#" class="send-messange">
+                                <span class="material-symbols-outlined">chat</span>
+                                <span>傳送訊息</span>
+                            </a>
+                        </span>
+                        <span>
+                            <a href="#">
+                                <img src="assets/images/line.png" alt="">
+                            </a>
+                        </span>
+                        <span>
+                            <a href="#">
+                                <img src="assets/images/facebook.png" alt="">
+                            </a>
+                        </span>
+                        <span>
+                            <a href="#">
+                                <img src="assets/images/twitter.png" alt="">
+                            </a>
+                        </span>
+                        <span>
+                            <a href="#" class="copy-icon">
+                                <span class="material-symbols-outlined">content_copy</span>
+                            </a>
+                        </span>
+                    </dvi>
                 </div>
             </div>
         </div>
     </div>
+    <div class="main-nav-block">
+        <div class="container">
+            <div class="main-nav-wrap">
+                <div class="page-tab">
+                    <ul class="tabs">
+                        <li>
+                            <a href="#">專案內容</a>
+                        </li>
+                        <li>
+                            <a href="#" data-count="2">專案更新</a>
+                        </li>
+                        <li>
+                            <a href="#" data-count="10">常見問題</a>
+                        </li>
+                        <li>
+                            <a href="#" data-count="1">留言</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="donate-wrap">
+                    <span class="like-btn">愛心</span>
+                    <span class="donate-btn">贊助專案</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
 </body>
+<script>
+    let tabs = document.querySelector('.tabs');
+    tabs.addEventListener('click', (e) => {
+        e.preventDefault();
+        let el = e.target;
+
+        if (el.tagName == 'A') {
+            el = el.parentNode;
+        }
+
+        if (el.tagName == 'LI') {
+            resetTabsActive();
+            el.classList.add('active')
+        }
+    });
+
+    function resetTabsActive() {
+        let items = tabs.querySelectorAll('li');
+        items.forEach(el => {
+            el.classList.remove('active');
+        })
+    }
+</script>
 
 </html>
