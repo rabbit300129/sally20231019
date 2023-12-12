@@ -1,19 +1,31 @@
+import { TODO } from './class/TODO.js';
+
 let elInput = document.querySelector('#todo-in');
 let elAddBtn = document.querySelector('#todo-add-btn');
 let elItem = document.querySelector('#todo-item');
+let todo = new TODO(elItem);
 
-elAddBtn.addEventListener('click', (e) => {
+const addTodo = () => {
     let value = elInput.value;
     if (!value) {
-        elInput.fucus();
-        return;
+        elInput.focus();
+        return; // void
     }
-
-    elItem.innerHTML += `<li>
-                        <div><input type="checkbox"></div>
-                        <div>${value}</div>
-                        </li>`
 
     elInput.value = '';
     elInput.focus();
+
+    todo.add(value);
+    todo.render();
+}
+
+elAddBtn.addEventListener('click', (e) => {
+    addTodo();
+})
+
+
+elInput.addEventListener('keyup', (e) => {
+    if (e.key.toString().toUpperCase() == 'ENTER') {
+        addTodo();
+    }
 })
