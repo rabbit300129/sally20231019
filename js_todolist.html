@@ -12,22 +12,47 @@
 
 <body>
     <div class="container">
-        <h1>TODO LIST</h1>
-        <div class="todo-input">
-            <input type="text" id="todo-in">
-            <button id="todo-add-btn">新增</button>
+        <div class="tabs" id="todo-list">
+            <div class="fn">
+                <h1>TODO LIST</h1>
+                <div>
+                    <a href="#" id="change-udi-btn">登出</a>
+                </div>
+            </div>
+            <div class="todo-input">
+                <input type="text" id="todo-in">
+                <button id="todo-add-btn">新增</button>
+            </div>
+            <hr>
+            <div class="todo-item-wrap">
+                <ul id="todo-item">
+                    <!-- <li>
+                    <input type="checkbox">
+                    <span>TEXT</span>
+                </li> -->
+                </ul>
+            </div>
         </div>
-        <hr>
-        <div class="todo-item-wrap">
-            <ul id="todo-item">
-                <!--  <li>
-                <div><input type="checkbox"></div>
-                <div>TEST</div>
-            </li>-->
-            </ul>
+
+        <div class="tabs" id="uid-app">
+            <h1>請輸入 UID</h1>
+            <div class="todo-input">
+                <input type="text" id="todo-uid">
+                <button id="todo-uid-btn">確認</button>
+            </div>
+        </div>
+
+        <div>
+            <input type="file" id="upload-file" accept="image/*" />
+        </div>
+        <div>
+            <button id="do-upload">upload file</button>
+        </div>
+        <div>
+            <img src="" alt="" id="preview">
         </div>
     </div>
 </body>
-<script src="assets/js/js_todolist.js"></script>
+<script type="module" src="assets/js/js_todolist.js"></script>
 
 </html>

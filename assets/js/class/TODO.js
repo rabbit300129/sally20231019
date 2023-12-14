@@ -18,19 +18,29 @@ class TODO {
         }
     }
 
+
+    write() {
+        this.#storage.write('todo', this.#items)
+    }
+
+    read() {
+        return this.#storage.read('todo', []);
+    }
+
     checkedToggle(index) {
         if (this.#items[index]) {
             this.#items[index].checked = !this.#items[index].checked
+            this.write();
             this.render();
         }
     }
 
-    render() {
+    #render() {
         let html = '';
         this.#items.forEach((item, index) => {
             let checked = item.checked ? 'checked' : '';
 
-            html += `<li data-index="${index}">
+            html += `<li data-index="${index}" draggable="true">
             <input type="checkbox" ${checked}>
             <span>${item.text}</span>
             </li>`
@@ -39,6 +49,8 @@ class TODO {
     }
 
     init() {
+        this.#items = this.read();
+        this.#render();
         this.#el.addEventListener('chlick', (e) => {
             let el = e.target;
             let tag = el.tagName.toString().toUpperCase();
@@ -52,7 +64,12 @@ class TODO {
                 this.checkedToggle(index);
             }
         })
+
+
+
     }
+
+    draAndDrop() { }
 }
 
 export { TODO }

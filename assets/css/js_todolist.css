@@ -8,10 +8,10 @@
 .todo-input input {
     height: 50px;
     padding: 10px;
-    border: 1px solid #412a2a;
+    border: 1px solid #dedede;
     outline: 0;
     flex: 1;
-    border-radius: 10px;
+    border-radius: 8px;
     font-size: 1.2rem;
 }
 
@@ -19,33 +19,76 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    height: 40px;
-    width: 60px;
+    height: 50px;
+    width: 80px;
     border: 0;
     border-radius: 8px;
-    background-color: rgb(0, 105, 204);
+    background-color: #1154a1;
     color: #fff;
     font-size: 1.1rem;
     cursor: pointer;
     font-weight: 600;
-    letter-spacing: 3px;
+    letter-spacing: 1px;
 }
 
 .todo-input button:hover {
-    background: #1d0296;
+    background: #1f4570;
 }
 
-.todo-item {
+.todo-item-wrap {
+    margin-top: 10px;
+}
+
+/* .todo-item {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+} */
+
+#todo-item {
     display: grid;
-    grid-template-columns: repeat(3, 4fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
 }
 
 #todo-item>li {
     display: flex;
     align-items: center;
-    border: 1px solid #1d0296;
+    border: 1px solid #dedede;
     padding: 10px 5px;
     border-radius: 4px;
     gap: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#todo-item>li:hover {
+    background: #3739b3;
+    color: #fff;
+    border-color: #3739b3;
+}
+
+#todo-item>li>input[type=checkbox]:checked+span {
+    text-decoration: line-through;
+}
+
+.tabs {
+    display: none;
+}
+
+.tabs.active {
+    display: block;
+}
+
+.fn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#preview {
+    max-width: 100%;
+    margin-top: 20px;
+    border: 1px solid #000;
 }
