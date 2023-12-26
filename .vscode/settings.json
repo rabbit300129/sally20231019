@@ -1,3 +1,5 @@
 {
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "liveServer.settings.CustomBrowser": "chrome",
+    "liveServer.settings.root": "/public"
 }
