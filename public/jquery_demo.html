@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Demo</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <script src="assets/js/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="contaniner">
+        <h1>jQuery Demo</h1>
+        <div id="display-account">Account Information.</div>
+        <div>
+            <input type="text" id="account" value="123">
+        </div>
+        <div>
+            <input type="checkbox" id="dd">
+        </div>
+
+        <div>
+            <button id="cc">change input style</button>
+        </div>
+
+        <div>
+            <button id="ddd">dd change</button>
+        </div>
+
+        <ul>
+            <li class="student">1</li>
+            <li class="student">2</li>
+            <li class="student">3</li>
+            <li class="student">4</li>
+            <li class="student">5</li>
+        </ul>
+    </div>
+</body>
+<script>
+    let elDisAccountDOM = document.querySelector('#display-account');
+    let elDisAccount = $('#display-account');
+
+    console.log(elDisAccount.html())
+    console.log(elDisAccountDOM.innerHTML)
+
+    let elAccountDOM = document.querySelector('#account');
+    let elAccount = $('#account');
+
+    console.log(elAccount.val())
+    console.log(elAccountDOM.value)
+
+    elAccount.val('456')
+
+    let elStudents = $('.student')
+    elStudents.each((index, student) => {
+        console.log(index, student)
+        student = $(student);
+        console.log(student.html())
+    })
+
+    let first = elStudents.eq(0);
+    console.log(first);
+    console.log(first[0])
+
+    elStudents.on('click', (e) => {
+        console.log(e.target.innerHTML);
+    })
+
+    let elStudentsDOM = document.querySelectorAll('.studnet')
+    elStudentsDOM.forEach(dom => {
+        dom.addEventListener('click', (e) => {
+            console.log('Origin')
+        })
+    })
+
+
+    let cc = $('#cc');
+    cc.on('click', (e) => {
+        //if (elAccount.hasClass('active')) {
+        //  elAccount.removeClass('active');
+        //} else {
+        //    elAccount.addClass('active')
+        //}
+
+        elAccount.toggleClass('actvie');
+
+    })
+
+    let ddd = $('#ddd')
+    let dd = $('#dd')
+
+    ddd.on("click", (e) => {
+        console.log(dd.prop('checked'))
+    });
+</script>
+
+</html>
